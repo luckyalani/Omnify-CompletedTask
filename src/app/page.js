@@ -468,7 +468,7 @@ const Page = () => {
     // console.log("chala");
     if (sidebar1.current.classList.contains("-translate-x-full")) {
       sidebar1.current.classList.remove("-translate-x-full");
-      sidebar1.current.classList.add("relative overflow-y-auto h-full");
+      // sidebar1.current.classList.add("relative overflow-y-auto h-full");
     } else {
       sidebar1.current.classList.add("-translate-x-full");
     }
@@ -503,7 +503,7 @@ const Page = () => {
               onClick={() => collapse()}
               className="text-md lg:text-xl font-semibold flex items-center justify-between w-full  "
             >
-              <span className="flex items-cemter gap-3">
+              <span className="flex items-cemter gap-3 md:text-[13px] lg:text-lg ">
                 <svg
                   width="22"
                   height="22"
@@ -630,8 +630,8 @@ const Page = () => {
                 </svg>
               </span>
             </div>
-            <div className="bg-[#F1F5F9]">
-              <div className="text-md lg:text-lg font-semibold">
+            <div className="bg-[#F1F5F9] flex flex-col gap-3">
+              <div className="md:text-[12px] lg:text-lg font-semibold">
                 08:30 AM Tue 20 Jan
               </div>
               <select className="border-none outline-none text-sm w-full bg-transparent outline-none">
@@ -1303,7 +1303,7 @@ const Page = () => {
         <div className=" mt-5 flex flex-col xl:flex-row  md:justify-between md:items-start justify-center items-center gap-7 w-full  mb-4  ">
           <div className="add-filter flex gap-3">
             <button
-              className="bg-[#F1F5F9] rounded-md p-2 px-3 flex items-center text-nowrap h-12"
+              className="bg-[#F1F5F9] rounded-md p-2 px-3 flex items-center text-nowrap h-12 hover:bg-gray-200 hover:rounded-sm "
               onClick={openmodal}
             >
               <span>
@@ -1327,7 +1327,7 @@ const Page = () => {
 
             {/* CHIPS */}
             <div className="flex">
-              <div className="chips-list flex justify-center items-center gap-1">
+              <div className="chips-list flex justify-center items-center gap-2 bounceIn ">
                 {chips &&
                   chips.map((chip) => (
                     <div
@@ -1389,7 +1389,7 @@ const Page = () => {
               />
             </div>
             <div>
-              <button className="px-2 md:px-4 py-2 ">
+              <button className="px-2 md:px-4 py-2 hover:bg-gray-200 hover:rounded-md ">
                 <span>
                   <svg
                     width="16"
@@ -1429,7 +1429,7 @@ const Page = () => {
                 onClick={() => {
                   handleOpenModal();
                 }}
-                className="px-2 md:px-4 py-2 "
+                className="px-2 md:px-4 py-2 hover:bg-gray-200 hover:rounded-md "
               >
                 <svg
                   width="16"
@@ -1452,7 +1452,7 @@ const Page = () => {
                   />
                 </svg>
               </button>
-              <button className="px-2 md:px-4 py-2 ">
+              <button className="px-2 md:px-4 py-2 hover:bg-gray-200 hover:rounded-md ">
                 <svg
                   width="16"
                   height="16"
@@ -1992,7 +1992,7 @@ const Page = () => {
                       </div>
                     </div>
 
-                    <div className="overflow-y-auto px-5 py-5 md:px-0 md:py-0 ">
+                    <div className="overflow-y-auto px-5 py-5 md:px-0 md:py-0 max-h-[250px] md:max-h-[275px] ">
                       {data.map((d) =>
                         form2Search === "" ? null : d.payer.includes(
                             form2Search
@@ -2110,7 +2110,7 @@ const Page = () => {
                           <span>Search by tags</span>
                         </button>
                       </div>
-                      <div ref={tabComp1} id="content-name" className="block">
+                      <div ref={tabComp1} id="content-name" className="block max-h-[150px] -z-20">
                         <div className=" mb-4">
                           <span className=" left-3 top-2.5 text-zinc-400 flex items-center border-2 border-black rounded-lg h-8 px-2">
                             <svg
@@ -2144,7 +2144,7 @@ const Page = () => {
                             />
                           </span>
 
-                          <div className="overflow-y-auto narrow-line max-h-[197px] px-5 py-5 my-4 md:px-0 md:py-0 my-2">
+                          <div className="overflow-y-auto narrow-line max-h-[150px] md:max-h-[200px] px-5 py-5 my-4 md:px-0 md:py-0 my-2">
                             {data.map((d) =>
                               form2Search === "" ? null : d.payer.includes(
                                   form2Search
@@ -2703,7 +2703,7 @@ const Page = () => {
         <div className="flex justify-between flex-col md:flex-row gap-7 pb-10 md:pb-0 items-center mt-4">
           <div>Displaying 15 out of 104</div>
           <div className="flex space-x-2">
-            <button className="px-4 py-2 flex items-center gap-2 ">
+            <button className="px-4 py-2 flex items-center gap-2  hover:rounded-sm ">
               <svg
                 width="16"
                 height="16"
@@ -2720,16 +2720,16 @@ const Page = () => {
               </svg>
               Previous
             </button>
-            <button className="px-4 py-1  rounded focus:border focus-within:border-gray-400 focus:rounded-md">
+            <button className="px-4 py-1  rounded focus:border hover:bg-gray-200 hover:rounded-sm focus-within:border-gray-400 focus:rounded-md">
               1
             </button>
-            <button className="px-4 py-1  rounded focus:border focus-within:border-gray-400 focus:rounded-md">
+            <button className="px-4 py-1  rounded focus:border hover:bg-gray-200 hover:rounded-sm focus-within:border-gray-400 focus:rounded-md">
               2
             </button>
-            <button className="px-4 py-1  rounded focus:border focus-within:border-gray-400 focus:rounded-md">
+            <button className="px-4 py-1  rounded focus:border hover:bg-gray-200 hover:rounded-sm focus-within:border-gray-400 focus:rounded-md">
               3
             </button>
-            <button className="px-4 py-1  rounded focus:border focus-within:border-gray-400 focus:rounded-md flex items-center gap-2">
+            <button className="px-4 py-1  rounded focus:border  hover:rounded-sm focus-within:border-gray-400 focus:rounded-md flex items-center gap-2 ">
               Next
               <svg
                 width="16"
