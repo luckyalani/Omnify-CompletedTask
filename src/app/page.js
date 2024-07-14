@@ -26,8 +26,7 @@ const Page = () => {
     const dropservice = dropdownMenu2.current;
   };
   const uncheck = () => {
-    inref.current
-      .querySelectorAll('input[type="checkbox"]')
+    inref.current.querySelectorAll('input[type="checkbox"]')
       .forEach((checkbox) => {
         checkbox.checked = false;
       });
